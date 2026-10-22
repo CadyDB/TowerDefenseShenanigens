@@ -15,19 +15,8 @@ public class Enemy : MonoBehaviour
     }
     public int Health
     {
-        get { 
-            
-            
-            
-            return health; 
-        
-        
-        }
-        set { health = value;
-        
-        
-        
-        }
+        get {  return health;   }
+        set { health = value; }
     }
     void Update()
     {

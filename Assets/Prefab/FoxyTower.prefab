@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5659579186205064300}
   - component: {fileID: 3693645604146374294}
+  - component: {fileID: 6857287363748442081}
   m_Layer: 0
   m_Name: FoxyTower
   m_TagString: Untagged
@@ -91,3 +92,21 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &6857287363748442081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7412305607072865457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b47882cfc44d6c4184331b632e929c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tower
+  range: 3
+  fireRate: 1
+  projectilePrefab: {fileID: 4653341273038784027, guid: dd66eec168aaed044aaea3f87fbdec98, type: 3}
+  firePoint: {fileID: 5659579186205064300}
+  fireTarget: {fileID: 0}
+  towerPrice: 20

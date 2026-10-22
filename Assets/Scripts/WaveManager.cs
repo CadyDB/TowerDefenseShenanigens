@@ -60,6 +60,8 @@ public class WaveManager : MonoBehaviour
         waveRunning = false;
         startWaveButton.interactable = true;
         currentWaveIndex++;
+
+        
     }
 
     void SpawnEnemy(GameObject prefab)

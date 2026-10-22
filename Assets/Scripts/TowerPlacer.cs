@@ -45,7 +45,7 @@ public class TowerPlacer : MonoBehaviour
         bool valid = placementMap.HasTile(cellPos) && !occupiedTiles.Contains(cellPos);
 
         ghostInstance.GetComponent<GhostTower>().SetValid(valid);
-        ;
+        
     }
 
     void HandlePlacementClick()
@@ -65,6 +65,8 @@ public class TowerPlacer : MonoBehaviour
         if (occupiedTiles.Contains(cellPos)) return;
 
         Instantiate(TowerSelectionUI.SelectedTowerPrefab, ghostInstance.transform.position, Quaternion.identity);
+
+        CoinManager.instance.UpdateCoins(-TowerSelectionUI.SelectedTowerPrefab.GetComponent<Tower>().towerPrice);
 
         TowerSelectionUI.SelectedTowerPrefab = null;
 

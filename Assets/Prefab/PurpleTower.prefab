@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8227198334836228187}
   - component: {fileID: 3573455158279037052}
+  - component: {fileID: 6952466654761526293}
   m_Layer: 0
   m_Name: PurpleTower
   m_TagString: Untagged
@@ -91,3 +92,20 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &6952466654761526293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5627104341178525408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b47882cfc44d6c4184331b632e929c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tower
+  range: 3
+  fireRate: 1
+  projectilePrefab: {fileID: 4776921847505777066, guid: 7b5d07f8307708548a32e06c3053de7a, type: 3}
+  firePoint: {fileID: 8227198334836228187}
+  fireTarget: {fileID: 0}

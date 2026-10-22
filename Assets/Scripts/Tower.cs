@@ -2,14 +2,20 @@ using UnityEngine;
 
 public class Tower : MonoBehaviour
 {
-    public float range = 3f;
-    public float fireRate = 1f;
+    private float range = 3f;
+    private float fireRate = 1f;
     public GameObject projectilePrefab;
     public Transform firePoint;
     public GameObject fireTarget;
     private float fireCooldown = 0f;
 
-    public int towerPrice = 1;
+    private int towerPrice = 1;
+
+    public int TowerPrice
+    {
+        get { return towerPrice; }
+        set { towerPrice = value; }
+    }
 
     void Update()
     {
@@ -41,7 +47,7 @@ public class Tower : MonoBehaviour
                 {
                 }
                 */
-                bestProgress = e.currentWayPoint;
+                bestProgress = e.CurrentWayPoint;
                 best = e;
             }
         }

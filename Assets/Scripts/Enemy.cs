@@ -2,11 +2,33 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public float speed = 2f;
-    public int health = 1;
+    private float speed = 2f;
+    private int health = 1;
     public Transform[] waypoints;
 
-    public int currentWayPoint = 0;
+    private int currentWayPoint = 0;
+
+    public int CurrentWayPoint
+    {
+        get { return currentWayPoint; }
+        set {  currentWayPoint = value; }
+    }
+    public int Health
+    {
+        get { 
+            
+            
+            
+            return health; 
+        
+        
+        }
+        set { health = value;
+        
+        
+        
+        }
+    }
     void Update()
     {
         if (waypoints == null || waypoints.Length == 0) return;

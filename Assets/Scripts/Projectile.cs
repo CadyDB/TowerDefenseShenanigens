@@ -3,7 +3,7 @@ using static UnityEngine.GraphicsBuffer;
 
 public class Projectile : MonoBehaviour
 {
-    public float speed = 5f;
+    private float speed = 5f;
     public Transform target;
     
     void Update()
@@ -23,8 +23,8 @@ public class Projectile : MonoBehaviour
         if (Vector2.Distance(transform.position, target.position) < 0.15f)
         {
             Enemy e = target.GetComponent<Enemy>();
-            e.health -= 1;
-            if (e.health < 0)
+            e.Health -= 1;
+            if (e.Health < 0)
             {
                 
                 Destroy(target.gameObject);

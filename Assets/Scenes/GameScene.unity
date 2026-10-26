@@ -829,8 +829,8 @@ MonoBehaviour:
     easyEnemies: 0
     hardEnemies: 5
   startWaveButton: {fileID: 299806274}
-  easyEnemyPrefab: {fileID: 7045961514406212947, guid: d798a2e9f7f6e71479ce4e20b9c67d57, type: 3}
-  hardEnemyPrefab: {fileID: 7045961514406212947, guid: 47c3159ea5fb5fa4ba3405be86e1e96f, type: 3}
+  easyEnemyPrefab: {fileID: 8681411952439818333, guid: 4c87085431a327647889d5018fa59e96, type: 3}
+  hardEnemyPrefab: {fileID: 0}
   wayPoints:
   - {fileID: 1170997714}
   - {fileID: 727574277}

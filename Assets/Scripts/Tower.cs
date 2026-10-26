@@ -1,13 +1,28 @@
 using UnityEngine;
 
+
+[System.Serializable]
+public class TowerUpgradeStage
+{
+    public float range;
+    public float fireRate;
+    public Sprite sprite;
+    public int price;
+}
 public class Tower : MonoBehaviour
 {
-    private float range = 3f;
-    private float fireRate = 1f;
+    public float range = 3f;
+    public float fireRate = 1f;
     public GameObject projectilePrefab;
     public Transform firePoint;
     public GameObject fireTarget;
     private float fireCooldown = 0f;
+
+    public TowerUpgradeStage[] upgradeStages;
+    public int upgradeStage = 0;
+    private SpriteRenderer sr;
+    public GameObject towerUpgradeUIPrefab;
+    private GameObject currentUI;
 
     private int towerPrice = 1;
 
@@ -15,6 +30,11 @@ public class Tower : MonoBehaviour
     {
         get { return towerPrice; }
         set { towerPrice = value; }
+    }
+
+    private void Awake()
+    {
+        sr = GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -60,5 +80,32 @@ public class Tower : MonoBehaviour
         Projectile pr = p.GetComponent<Projectile>();
         pr.target = target.transform;
 
+    }
+
+    public void Upgrade()
+    {
+        TowerUpgradeStage currentUpgradeStage = upgradeStages[upgradeStage];
+
+        range = currentUpgradeStage.range;
+        fireRate = currentUpgradeStage.fireRate;
+        sr.sprite = currentUpgradeStage.sprite;
+        CoinManager.instance.UpdateCoins(-currentUpgradeStage.price);
+        upgradeStage += 1;
+    }
+
+    private void OnMouseDown()
+    {
+        if(currentUI == null)
+        {
+            currentUI = Instantiate(towerUpgradeUIPrefab, FindObjectOfType<Canvas>().transform);
+        }
+
+        TowerUpgradeUI currentUpgradeUI = currentUI.GetComponent<TowerUpgradeUI>();
+        currentUpgradeUI.tower = this;
+
+        currentUI.transform.position = Input.mousePosition + new Vector3(50, -50);
+
+        if (upgradeStage >= upgradeStages.Length) return;
+        currentUpgradeUI.priceTxt.text = upgradeStages[upgradeStage].price.ToString();
     }
 }

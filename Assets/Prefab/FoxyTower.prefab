@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5659579186205064300}
   - component: {fileID: 3693645604146374294}
   - component: {fileID: 6857287363748442081}
+  - component: {fileID: 6689177845487881359}
   m_Layer: 0
   m_Name: FoxyTower
   m_TagString: Untagged
@@ -109,4 +110,60 @@ MonoBehaviour:
   projectilePrefab: {fileID: 4653341273038784027, guid: dd66eec168aaed044aaea3f87fbdec98, type: 3}
   firePoint: {fileID: 5659579186205064300}
   fireTarget: {fileID: 0}
-  towerPrice: 20
+  upgradeStages:
+  - range: 5
+    fireRate: 1.5
+    sprite: {fileID: -7333583220236344710, guid: 614c6f7afe2981b48b7faa570537090e, type: 3}
+    price: 16
+  - range: 7
+    fireRate: 2
+    sprite: {fileID: 5674505827704211495, guid: 2ca18fe21bee0a24fad801db818c705c, type: 3}
+    price: 23
+  upgradeStage: 0
+  towerUpgradeUIPrefab: {fileID: 5819558121668981810, guid: bd6a1b22270299b479db07e1bf032cad, type: 3}
+--- !u!61 &6689177845487881359
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7412305607072865457}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.014999986, y: 0.76}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.48514852, y: -0.47435898}
+    oldSize: {x: 1.01, y: 0.78}
+    newSize: {x: 1.01, y: 0.78}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.01, y: 0.78}
+  m_EdgeRadius: 0

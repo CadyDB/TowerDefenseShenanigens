@@ -2,6 +2,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.Rendering;
+using TMPro;
+using UnityEditor.Build.Reporting;
 
 [System.Serializable]
 public class WaveData
@@ -20,6 +22,8 @@ public class WaveManager : MonoBehaviour
     public GameObject hardEnemyPrefab;
 
     public Transform[] wayPoints;
+
+    public TextMeshProUGUI waveTxt;
 
     private int currentWaveIndex = 0;
     private bool waveRunning = false;
@@ -60,7 +64,7 @@ public class WaveManager : MonoBehaviour
         waveRunning = false;
         startWaveButton.interactable = true;
         currentWaveIndex++;
-
+        waveTxt.text = (currentWaveIndex + 1).ToString();
         
     }
 

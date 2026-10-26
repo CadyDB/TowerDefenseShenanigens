@@ -33,6 +33,7 @@ public class Enemy : MonoBehaviour
 
             if (currentWayPoint >= waypoints.Length)
             {
+                HealthManager.Instance.UpdateHealth(-1);
                 Destroy(gameObject);
             }
         }

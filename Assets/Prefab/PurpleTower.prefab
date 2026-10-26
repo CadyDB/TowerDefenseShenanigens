@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8227198334836228187}
   - component: {fileID: 3573455158279037052}
   - component: {fileID: 6952466654761526293}
+  - component: {fileID: 1044669683123529201}
   m_Layer: 0
   m_Name: PurpleTower
   m_TagString: Untagged
@@ -104,8 +105,65 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b47882cfc44d6c4184331b632e929c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Tower
-  range: 3
-  fireRate: 1
+  range: 5
+  fireRate: 1.5
   projectilePrefab: {fileID: 4776921847505777066, guid: 7b5d07f8307708548a32e06c3053de7a, type: 3}
   firePoint: {fileID: 8227198334836228187}
   fireTarget: {fileID: 0}
+  upgradeStages:
+  - range: 7
+    fireRate: 2
+    sprite: {fileID: 7108981239001365531, guid: c19d6d550cf81b44aa7cc32153fddc47, type: 3}
+    price: 9
+  - range: 10
+    fireRate: 2.5
+    sprite: {fileID: 45391188141194929, guid: 41eed47b02bbdfa4d93344cc0b7674e7, type: 3}
+    price: 15
+  upgradeStage: 0
+  towerUpgradeUIPrefab: {fileID: 5819558121668981810, guid: bd6a1b22270299b479db07e1bf032cad, type: 3}
+--- !u!61 &1044669683123529201
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5627104341178525408}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.0049999654, y: 0.63}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.49253735, y: -0.3289474}
+    oldSize: {x: 0.67, y: 0.76}
+    newSize: {x: 0.67, y: 0.76}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.67, y: 0.76}
+  m_EdgeRadius: 0

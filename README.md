@@ -7,6 +7,8 @@
 
 dit is de basic layout voor de map van het spel. De enemies komen van een punt van de map en lopen naar de main basis waarbij ze damage doen. Ik weet niet zeker of ik de basis echt ga houden, maar dat zie ik wel.
 
+Update, 26-10-2026, 4 dagen voor de deadline, ik heb de laatste tijd veel dingen toegevoegd en het spel is bijna af. na de deadline ga ik het spel verder uitbreiden.
+
 
 ## Prog opdrachten
 

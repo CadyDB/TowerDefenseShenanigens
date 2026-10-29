@@ -9,7 +9,7 @@ dit is de basic layout voor de map van het spel. De enemies komen van een punt v
 
 Update, 26-10-2026, 4 dagen voor de deadline, ik heb de laatste tijd veel dingen toegevoegd en het spel is bijna af. na de deadline ga ik het spel verder uitbreiden.
 
-Update 29-10-2026, morgen is de deadline, vandaag komt de eerste versie op github te staan. Meeste errors zijn gefixt en meeste dingen doen het prima.
+Update 29-10-2026, morgen is de deadline, vandaag komt de eerste versie op github te staan. Meeste errors zijn gefixt en meeste dingen doen het prima. Laat maar ik kan het niet builden.
 
 
 ## Prog opdrachten

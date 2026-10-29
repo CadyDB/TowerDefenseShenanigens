@@ -24,13 +24,8 @@ public class Tower : MonoBehaviour
     public GameObject towerUpgradeUIPrefab;
     private GameObject currentUI;
 
-    private int towerPrice = 1;
+    public int towerPrice = 10;
 
-    public int TowerPrice
-    {
-        get { return towerPrice; }
-        set { towerPrice = value; }
-    }
 
     private void Awake()
     {

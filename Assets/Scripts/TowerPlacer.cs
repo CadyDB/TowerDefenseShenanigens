@@ -66,7 +66,7 @@ public class TowerPlacer : MonoBehaviour
 
         Instantiate(TowerSelectionUI.SelectedTowerPrefab, ghostInstance.transform.position, Quaternion.identity);
 
-        CoinManager.instance.UpdateCoins(-TowerSelectionUI.SelectedTowerPrefab.GetComponent<Tower>().TowerPrice);
+        CoinManager.instance.UpdateCoins(-TowerSelectionUI.SelectedTowerPrefab.GetComponent<Tower>().towerPrice);
 
         TowerSelectionUI.SelectedTowerPrefab = null;
 

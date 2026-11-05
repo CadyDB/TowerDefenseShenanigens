@@ -11,6 +11,9 @@ Update, 26-10-2026, 4 dagen voor de deadline, ik heb de laatste tijd veel dingen
 
 Update 29-10-2026, morgen is de deadline, vandaag komt de eerste versie op github te staan. Meeste errors zijn gefixt en meeste dingen doen het prima. Laat maar ik kan het niet builden.
 
+## Version 1.0.0
+Hierbij de eerste release van de game. Het heeft geen introductie scherm, dat gaat bij de volgende release komen. Het heeft torens, upgrades, 5 waves in totaal, een health systeem en munten. Bij de volgende release wil ik extra aandacht besteden aan extra waves en een titel scherm. Veel speel plezier!
+
 
 ## Prog opdrachten
 

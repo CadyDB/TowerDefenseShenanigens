@@ -6,7 +6,7 @@ public class TowerUpgradeUI : MonoBehaviour
 {
     public Tower tower;
 
-    public Button upgradeButton;
+    [SerializeField] Button upgradeButton;
     public TextMeshProUGUI priceTxt;
 
     private bool justOpened = true;

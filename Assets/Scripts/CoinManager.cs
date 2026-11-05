@@ -6,7 +6,7 @@ public class CoinManager : MonoBehaviour
     public static CoinManager instance;
 
     private int coins = 10;
-    public TextMeshProUGUI coinTxt;
+    [SerializeField] TextMeshProUGUI coinTxt;
 
     public int Coins 
     { 

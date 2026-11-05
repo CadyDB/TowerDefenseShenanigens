@@ -3,7 +3,6 @@ using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.Rendering;
 using TMPro;
-using UnityEditor.Build.Reporting;
 
 [System.Serializable]
 public class WaveData

@@ -10,6 +10,7 @@ public class WaveData
     public float duration = 10f;
     public int easyEnemies = 5;
     public int hardEnemies = 2;
+    public int bossEnemies = 1;
 }
 
 public class WaveManager : MonoBehaviour
@@ -17,6 +18,7 @@ public class WaveManager : MonoBehaviour
     public WaveData[] waves;
     public Button startWaveButton;
 
+    public GameObject bossEnemyPrefab;
     public GameObject easyEnemyPrefab;
     public GameObject hardEnemyPrefab;
 
@@ -56,6 +58,12 @@ public class WaveManager : MonoBehaviour
         {
             SpawnEnemy(hardEnemyPrefab);
             yield return new WaitForSeconds((wave.duration / 3) / wave.hardEnemies);
+        }
+
+        for (int i = 0; i < wave.bossEnemies; i++)
+        {
+            SpawnEnemy(hardEnemyPrefab);
+            yield return new WaitForSeconds((wave.duration / 3) / wave.bossEnemies);
         }
 
         yield return new WaitForSeconds(wave.duration / 3);

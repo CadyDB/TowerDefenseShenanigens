@@ -40,7 +40,7 @@ public class TowerPlacer : MonoBehaviour
         Vector3 worldCenter = placementMap.GetCellCenterWorld(cellPos);
         worldCenter.z = 0;
 
-        ghostInstance.transform.position = worldCenter + new Vector3(0, placementMap.cellSize.y * 0.25f);
+        ghostInstance.transform.position = worldCenter;
 
         bool valid = placementMap.HasTile(cellPos) && !occupiedTiles.Contains(cellPos);
 
@@ -64,7 +64,10 @@ public class TowerPlacer : MonoBehaviour
         if (!placementMap.HasTile(cellPos)) return;
         if (occupiedTiles.Contains(cellPos)) return;
 
-        Instantiate(TowerSelectionUI.SelectedTowerPrefab, ghostInstance.transform.position, Quaternion.identity);
+        Vector3 worldCenter = placementMap.GetCellCenterWorld(cellPos);
+        worldCenter.z = 0;
+
+        Instantiate(TowerSelectionUI.SelectedTowerPrefab, worldCenter, Quaternion.identity);
 
         CoinManager.instance.UpdateCoins(-TowerSelectionUI.SelectedTowerPrefab.GetComponent<Tower>().towerPrice);
 
